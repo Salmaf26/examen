@@ -1,6 +1,7 @@
 ¿Cuál es la diferencia fundamental entre let y const en JavaScript?
 el let es un valor que podemos mantener con un mismo valor
 const es un valor que podemos sobrescrivir
++la 
 
 ¿Qué significa que una variable declarada con let sea mutable(que se pueda cambiar su valor)?
 podemos sobrescribir la informacion despues conforme la usemos
@@ -9,25 +10,28 @@ podemos sobrescribir la informacion despues conforme la usemos
 para ver que valor debe de estar declarado de tal manera
 
 ¿Cuál es el problema principal con el uso de "var" en JavaScript?
-
++al usar un var no limitamos su uso en el codigo por lo que que no podemos generar errores de manera global, ya que su valor 
+puede ser cambiado en alguna fraccion de nuestro codigo
 
 ¿Qué diferencias existen entre var y let/const en términos de ámbito (scope)?
-depende para que los uses
+var tiene un alcance global, let se puede actualizar y declarar dentro de su alcance y const mantendra su valor globar
+dentro del scope donde se declaro
 
 ¿Cuáles son los cinco tipos de datos primitivos vistos en el curso de JavaScript?
-
+string, boolean, number, undefined, null, symbol
 
 ¿Cuál es el tipo de dato primitivo que se utiliza para representar un valor verdadero o falso?
 booleano
 
 ¿Qué tipo de dato primitivo se utiliza para representar valores que no están definidos o que están ausentes?
-null
+undefined
 
 ¿Cómo se define una cadena de texto (String) en JavaScript?
-
+declara un texto usando comillas, declarandolo como una variable e igualarlo a un mensaje
 
 ¿Qué es una función en programación y para qué se utiliza?
 una funcion es una serie de pasos que utilizamos para mostrar los datos que necesitamos, ya sea el caso
+encapsulamiento de codigo que podemos reutilizar en nuestro programa
 
 ¿Cómo se define una función en JavaScript? Proporciona un ejemplo básico(no utilizar function).
 registrar{
@@ -37,14 +41,21 @@ registrar{
     }
 }
 
++const funcion = ("algo que se puede llamar")=> {
+    elementos de la funcion
+}
+
 ¿Qué es un parámetro en el contexto de las funciones?
 algo que nos va a limitar nuestra funcion
++es un valor que tomara cuando llamemos a nuestra funcion y le enviemos su argumento el parametro solo
+existira dentro de la funcion
 
 ¿Qué es un argumento en el contexto de las funciones?
-un valor de nuestra funcion
+un valor que se va a enviar a nuestra funcion
 
 ¿Cuál es la relación entre los parámetros y los argumentos en una función?
-que estas nos van a ayudar a tener bien nuestras funciones
+son los que conforman nuestra funcion, trabajan en conjunto
+los paramentros dependen de los argumentos, ya que los paramentros pueden tener valores por defecto
 
 ¿Cuál es la diferencia entre pasar una variable por valor y pasarla por referencia?
 por valor tomamos como referencia que nosotros colocamos y por referencia solo la jalamos de otra parte
@@ -53,7 +64,7 @@ por valor tomamos como referencia que nosotros colocamos y por referencia solo l
 es una serie de elementos que complementan algo
 
 ¿Cómo se define un objeto en JavaScript?
-carro{
+carro = {
     marca: mazda,
     modelo: 2016,
     color: azul
@@ -67,26 +78,31 @@ carro.marca
 es una serie de elementos de un mismo tipo, podemos declarar varias cosas mientras sean de un mismo tipo
 
 ¿Cómo se define y se crea un array en JavaScript?
-frutas: [manzana, platano, pepino, mango]
+const frutas= ["manzana", "platano", "pepino", "mango"];
 
 ¿Cómo se accede a los elementos de un array en JavaScript?
 ponemos el nombre de nuestro array y luego seleccionamos el numero en que esta posicionado el elemento que queremos saber empezando desde el 0
 frutas[3], el cual nos deberia arrojar mango
 
 ¿Cómo se realiza la iteración sobre los elementos de un array en JavaScript?
-seleccionando los elementos con sus nombre 
+for(let i=0, i<array)
 
 ¿Cómo se define una clase en JavaScript?
-
+palabra class
 
 ¿Cómo se crea un objeto a partir de una clase en JavaScript?
 le colocamos el nombre y adentro colocaremos los objetos que vamos a utilizar
+clase new class()
 
 ¿Qué es la estructura condicional "if" en programación y para qué se utiliza?
-se usa en el caso de que puedan pasar varias cosas al declarar algo y asi poder darle una solucion a lo que se le pueda agregar en el momento y se muestre
+se usa en el caso de que puedan pasar varias cosas al declarar algo y asi poder darle una solucion
+a lo que se le pueda agregar en el momento y se muestre
++para condicionar datos o evaluar preposiciones
 
 ¿Cuál es la importancia de los bloques "else" y "else if" en una estructura condicional "if"?
 es para declarar la continuacion de condiciones if, si no me hace esto, realiza esto y asi hasta que este alguno bien
++para evaluar diferentes condiciones
 
 ¿Cuál es la diferencia entre los operadores "==" y "===" en una condición "if"?
-que deben ser exactamente igual a los datos que se estan agregando en esa variable 
+que deben ser exactamente igual a los datos que se estan agregando en esa variable
++el === evalua el tipo de dato y el == es solo igualdad no diferencia entre tipo de dato 
